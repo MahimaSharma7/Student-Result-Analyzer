@@ -21,18 +21,19 @@ try:
 
         sci = int(input('Score in Science? '))
         new_list.append(sci) 
-    #print('before',new_list)
-    #print('before',dic)
-    #print('before',main_list)
+  
         dic[name] = new_list
         main_list.append(dic)
-#print('after',new_list)
+
 except:
     print('Enter correct score in digits')
+    
 for x in main_list:
     for k,v in x.items():
+        
         total = sum(v)
         avg = total / len(v)
+        
         if avg >= 90:
             grade = 'A'
         elif avg >= 75:
@@ -41,14 +42,13 @@ for x in main_list:
             grade = 'C'
         else:
             grade = 'F'
+            
         print('Student:',k)
         print('Marks:',v)
         print('Total:',total)
         print('Average:',avg)
         print('Grade:',grade)
 
-#print('after',dic)
-#print('after',main_list)
 
 
 
